@@ -1,5 +1,6 @@
 package oopProject;
 
+import java.lang.management.GarbageCollectorMXBean;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +30,18 @@ public class OopProjectDriver {
 
 		CarDealership dealershipStock = new CarDealership(carList);
 		
+		dealershipStock.add(new Car("2020", "Porsche", "911", false));
+		System.out.println(dealershipStock.get(1));
 		dealershipStock.washCars();
+		System.out.println("Done washing the cars, now let's wash 2 more cars: ");
+		dealershipStock.washCars(dealershipStock.get(1), dealershipStock.get(3));
+		System.out.println("Now let's drive the cars!");
+		dealershipStock.testDrive(dealershipStock.get(2));
+		dealershipStock.testDrive(dealershipStock.get(4));
+		System.out.println("The dealership is closing, let's pull the cars into the garage");
+		dealershipStock.pullCarsIntoGarage();
+		System.out.println(CarDealership.garage.capacity());
+		
 		
 		
 	}
