@@ -51,4 +51,11 @@ public class Truck extends Vehicle implements Movement {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Truck [getYear()=" + getYear() + ", getMake()=" + getMake() + ", getModel()=" + getModel()
+				+ ", isAutoTransmission()=" + isAutoTransmission() + "]";
+	}
+
+	
 }

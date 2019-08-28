@@ -6,7 +6,6 @@ import java.util.List;
 public class OopProjectDriver {
 
 	public static void main(String[] args) {
-		System.out.println(new Car());
 		List<Car> carList = new ArrayList<Car>();
 		List<Truck> truckList = new ArrayList<Truck>();
 		
@@ -17,17 +16,22 @@ public class OopProjectDriver {
 		
 		System.out.println(carList);
 		
-		Truck f150 = new Truck("1989", "Ford", "F150", true);
-		Truck titan = new Truck("1989", "Nissan", "Titan", true);
-		Truck ranger = new Truck("1989", "Ford", "Ranger", true);
+		truckList.add(new Truck("1989", "Ford", "F150", true));
+		truckList.add(new Truck("1989", "Nissan", "Titan", true));
+		truckList.add(new Truck("1989", "Ford", "Ranger", true));
 				
-//		
-//		focus.turnRight();
-//		focus.turnRight();
-//		versa.turnRight();
-//		civic.turnRight();
+		System.out.println(truckList);
+		carList.get(0).turnRight();
+		carList.get(1).turnRight();
+		carList.get(3).turnRight();
 		
+		System.out.println(carList.get(0).numberOfCarRightTurns);
 
+		CarDealership dealershipStock = new CarDealership(carList);
+		
+		dealershipStock.washCars();
+		
+		
 	}
 
 }

@@ -53,4 +53,11 @@ public class Car extends Vehicle implements Movement {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Car [getYear()=" + getYear() + ", getMake()=" + getMake() + ", getModel()=" + getModel()
+				+ ", isAutoTransmission()=" + isAutoTransmission() + "]";
+	}
+
+	
 }
